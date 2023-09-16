@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("train2.jpg") no-repeat center;
+    background-size: cover;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    z-index: 99;
+    font-family: "Times New Roman", Times, serif;
+    
+}
+h1{
+    color: #000000;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 0;
+    text-align: center;    
+    font-style: italic;
+}
+.logo {
+    width: 100px; /* Width of the logo */
+    height: 100px; /* Height of the logo */
+    margin-right: 20px; /* Add right margin to create spacing between logo and header text */
+    border-radius: 50%; /* Make the logo a circle using border-radius */
+    background-color: #fff; /* Background color for the logo */
+    display: flex; /* Enable flexbox to center the logo content */
+    justify-content: center; /* Center-align the content (text or image) horizontally */
+    align-items: center; /* Center-align the content (text or image) vertically */
+}
+
+
+.navigation {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    padding: 12px 20px;
+}
+
+.menu {
+    display: flex;
+}
+.menu li {
+    padding-left: 30px;
+}
+
+.open-menu , .close-menu {
+    position : absolute;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 33px;
+    right: 10rem;
+}
+
+
+
+#check {display: none;}
+
+.menu li a {
+    display: inline-block;
+    position: relative;
+    font-size: 1.1em;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 15px;
+    padding-top: 15px;
+}
+
+.menu li a::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #000000;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.menu li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: #fff;
+    color: #333;
+}
+
+
+
+.wrapper {
+    width: 450px;
+    height: 700px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin-top: 100px;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+    width: 15px;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    font-size: 18px;
+    background: #fff;
+    cursor: pointer;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.register-link p a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Find Train</title>
+</head>
+<body>
+    <header>
+        <h1>Bharatiya Railways</h1>
+        <nav>
+            <ul class="navigation">
+                <ul><img src="logo-less.png" alt="train" class="logo"></ul>
+                <span class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="station.php">Stations</a></li>
+                    <li><button class="btnLogin-popup">Admin</button></li>
+                </span>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <form action="find_train.php" method="post">
+            <h2>Find Your Train</h2>
+            <div class="input-box">
+                <label for="starting_station">From : </label>
+                <input type="text" name="starting_station" id="starting_station" placeholder="Enter Staring Station">
+            </div>
+            <div class="input-box">
+                <label for="destination_station">To : </label>
+                <input type="text" name="destination_station" id="destination_station" placeholder="Enter Destination Station">
+            </div>
+            <div class="input-box">
+                <label for="train_type">Train Type : </label>
+                <div class="select-box ">
+                    <select name="train_type" id="train_type">
+                        <option value="all">All</option>
+                        <option value="passenger">Passenger</option>
+                        <option value="express">Express</option>
+                        <option value="superfast">Superfast</option>
+                    </select>
+                </div>
+                
+            </div>
+            <div class="input-box">
+                <label for="date">Date :</label>
+                <input type="date" name="date" id="date" required>
+            </div>
+            <input class="submit" type="submit" value="Find Available Trains">
+        </form>
+    </div>
+    
+</body>
+</html>

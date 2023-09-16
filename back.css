@@ -1,0 +1,47 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    text-align: left;
+}
+
+.heading {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #0a6d0d;
+}
+
+button {
+    background-color: #47884a;
+    color: white;
+    padding: 8px 16px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    display: block; 
+    margin: 0 auto;
+}
+button:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login Page</title>
+</head>
+<body>
+    <header>
+        <h1>Bharatiya Railways</h1>
+        <nav>
+            <ul class="navigation">
+                <li><img src="logo-less.png" alt="train" class="logo"></li>
+                <span class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="station.php">Stations</a></li>
+                    <li><button class="btnLogin-popup">Admin</button></li>
+                </span>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">        
+        <form action="login.php" method="POST">
+            <h2>Login</h2>
+            <div class="input-box">
+                <input type="text" name="username" id="username" placeholder="Enter your username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember Me</label>
+                <a href="forgot_password.html">Forgot Password ?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+
+            <div class="register-link">
+                <p>Don't have an account ?<a href="register.html">Register Now</a></p>
+            </div>
+            <div class="register-link">
+                <p>Or <a href="index.html">Login as Guest</a></p>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>

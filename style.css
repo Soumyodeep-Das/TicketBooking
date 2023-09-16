@@ -1,0 +1,103 @@
+input[type=text], input[type=email] , input[type=tel], input[type=date]{
+    margin: 0 auto;
+    width: 300px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    border: none;
+    border-bottom: 2px solid rgb(197, 159, 76);
+    border-radius: 4px;
+    font-size: 15px;
+    text-align: center;
+    background: transparent;
+}
+
+input[type=text]:focus, input[type=email]:focus , input[type=tel]:focus, input[type=date]:focus{
+    outline: none;
+    border-bottom: 2px solid rgb(174, 224, 57);
+}
+
+input::placeholder {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-align: center;
+}
+
+.input-box input,
+.input-dropdown {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+    outline: none;
+}
+
+.input-dropdown {
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.select-box {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 15px 45px 20px 20px;
+    outline: none;
+}
+
+/* Style the options */
+
+.select-box select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 45px 0 20px;
+}
+
+.select-box select::-ms-expand {
+    background: transparent;
+}
+
+.select-box option {
+    background-color: transparent; /* Background color of options */
+    color: #333; /* Text color of options */
+    cursor: pointer;
+}
+
+/* Style the selected option */
+.select-box option:checked {
+    background-color: #007bff; /* Background color of the selected option */
+    color: #fff; /* Text color of the selected option */
+}
+
+.submit {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.submit:hover {
+    background: #fff;
+    color: #333;
+} 
