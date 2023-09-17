@@ -1,16 +1,18 @@
 <?php
-// echo "Tickets booked successfully!";
-// echo "<br>";
-$name = $_POST['name'];
-// echo "<br>";
-$email = $_POST['email'];
-// echo "<br>";
-$phone = $_POST['phone'];
-// echo "<br>";
+session_start(); // Start the session
+if (isset($_SESSION['user_details'])) {
+    $user_details = $_SESSION['user_details'];
+    $name = $user_details['name'];
+    $email = $user_details['email'];
+    $phone = $user_details['phone_no'];
+} else {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+}
+
 $ticket = $_POST['ticket'];
-// echo "<br>";
 $payment = $_POST['payment'];
-// echo "<br>";
 
 $starting_station = isset($_POST['starting_station']) ? $_POST['starting_station'] : '';
 $destination_station = isset($_POST['destination_station']) ? $_POST['destination_station'] : '';
@@ -24,9 +26,8 @@ $destination_station=preg_replace('/\s+/', '', $destination_station);
 date_default_timezone_set('Asia/Kolkata');
 $current_time = date("H:i:s");
 
-// echo "<br>Starting Station: $starting_station";
-// echo "<br>Destination Station: $destination_station";
-// echo "<br>Date: $date";
+// echo $name . "<br>" . $email . "<br>" . $phone . "<br>" . $ticket . "<br>" . $payment . "<br>" . $starting_station . "<br>" . $destination_station . "<br>" . $id . "<br>" . $trainIndex . "<br>" . $boarding_time . "<br>" . $arrival_time . "<br>" . $time . "<br>" . $current_time . "<br>";
+
 
 $servername = "localhost";
 $username = "root";

@@ -1,5 +1,4 @@
 <?php
-
 $starting_station = isset($_GET['starting_station']) ? $_GET['starting_station'] : '';
 $destination_station = isset($_GET['destination_station']) ? $_GET['destination_station'] : '';
 $date = isset($_GET['date']) ? $_GET['date'] : '';
@@ -180,9 +179,20 @@ if ($result) {
             
             echo "<td>" . $row['trainType'] . "</td>"; 
 
-            // echo "<td><button class='button button1' onclick='window.location.href=\"details_page.php\"'>Book</button></td>";
-            echo "<td><button class='button button1' onclick=\"window.location.href='details_page.php?starting_station=' + encodeURIComponent('" . strtolower($_GET['starting_station']) . "') + '&destination_station=' + encodeURIComponent('" . strtolower($_GET['destination_station']) . "') + '&date=' + encodeURIComponent('" . $_GET['date'] . "') + '&trainIndex=' + encodeURIComponent('" . $row['trainIndex'] . "')\">Book Train</button></td>";
+            // echo "<td><button class='button button1' onclick='window.location.href=\"logged_in_user_details.php\"'>Book</button></td>";
 
+            session_start(); // Start the session
+
+            if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+                // User is logged in, redirect to logged_in_user_details.php
+                echo "<td><button class='button button1' onclick=\"window.location.href='logged_in_user_details.php?starting_station=" . urlencode(strtolower($_GET['starting_station'])) . "&destination_station=" . urlencode(strtolower($_GET['destination_station'])) . "&date=" . urlencode($_GET['date']) . "&trainIndex=" . urlencode($row['trainIndex']) . "';\">Book Train</button></td>";
+            } else {
+                // User is not logged in, redirect to details_page.php
+                echo "<td><button class='button button1' onclick=\"window.location.href='details_page.php?starting_station=" . urlencode(strtolower($_GET['starting_station'])) . "&destination_station=" . urlencode(strtolower($_GET['destination_station'])) . "&date=" . urlencode($_GET['date']) . "&trainIndex=" . urlencode($row['trainIndex']) . "';\">Book Train</button></td>";
+            }
+
+
+           
             echo "</tr>";
         }
         

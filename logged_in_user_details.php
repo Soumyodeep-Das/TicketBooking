@@ -55,21 +55,34 @@
             </ul>
         </nav>
     </header>
-
+    <?php
+    session_start(); // Start the session
+    if (isset($_SESSION['user_details'])) {
+        $user_details = $_SESSION['user_details'];
+        $name = $user_details['name'];
+        $email = $user_details['email'];
+        $phone_no = $user_details['phone_no'];
+    } else {
+        // Handle the case where the user is not logged in or the session is not set
+        // Redirect the user to the login page or display a message
+        echo "<script>alert('Please log in to access this page')</script>";
+        echo "<script>window.location.href='login.php'</script>";
+    }
+    ?>
     <div class="wrapper">        
         <form action="back.php" method="POST">
         <h2>User Details</h2>
         <div class="input-box">
-            <input type="text" name="name" id="name" placeholder="Enter your Name" required>
+            <input type="text" name="name" id="name" value="<?php echo $name?>" readonly>
             <i class="bx bx-user-circle"></i>
         </div>
         
         <div class="input-box">
-            <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+            <input type="email" name="email" id="email" value="<?php echo $email?>" readonly>
             <i class="bx bxs-envelope"></i>                
         </div>
         <div class="input-box">
-            <input type="tel" name="phone" id="phone" placeholder="Enter your Phone Number" required>
+            <input type="tel" name="phone" id="phone" value="<?php echo $phone_no?>" readonly>
             <i class="bx bx-phone"></i>
         </div>
         <div class="input-box ">
