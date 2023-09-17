@@ -26,9 +26,6 @@ $destination_station=preg_replace('/\s+/', '', $destination_station);
 date_default_timezone_set('Asia/Kolkata');
 $current_time = date("H:i:s");
 
-// echo $name . "<br>" . $email . "<br>" . $phone . "<br>" . $ticket . "<br>" . $payment . "<br>" . $starting_station . "<br>" . $destination_station . "<br>" . $id . "<br>" . $trainIndex . "<br>" . $boarding_time . "<br>" . $arrival_time . "<br>" . $time . "<br>" . $current_time . "<br>";
-
-
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -41,7 +38,7 @@ $conn = mysqli_connect($servername, $username, $password);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-// echo "<br>Connected successfully";
+// Connected successfully";
 
 // Select the database
 mysqli_select_db($conn, $database);
@@ -76,7 +73,7 @@ $sql = "INSERT INTO `userdetails` (`name`, `email`, `phone_no`, `no_of_tickets`,
 $result = mysqli_query($conn, $sql);
 
 mysqli_close($conn);
-// echo "<br>Connection closed";
+// Connection closed";
 ?>
 
 <!DOCTYPE html>

@@ -32,7 +32,6 @@ $conn = mysqli_connect($servername, $username, $password);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-// echo "<br>Connected successfully";
 
 // Select the database
 mysqli_select_db($conn, $database);
@@ -41,10 +40,6 @@ mysqli_select_db($conn, $database);
 $starting_station = mysqli_real_escape_string($conn, $starting_station);
 $destination_station = mysqli_real_escape_string($conn, $destination_station);
 $current_time = mysqli_real_escape_string($conn, $current_time);
-// Construct the SQL query with JOIN
-// $sql = "SELECT *
-//         FROM $starting_station AS start
-//         INNER JOIN $destination_station AS dest ON start.trainIndex = dest.trainIndex AND start.trainTime>time($current_time) AND dest.trainTime>time($current_time) ORDER BY start.trainTime ASC" ;
 
 if($date==$current_date)
 {
@@ -62,17 +57,9 @@ else
     ORDER BY start.trainTime ASC";
 }
 
-// $sql = "SELECT *
-//         FROM $starting_station AS start
-//         INNER JOIN $destination_station AS dest ON start.trainIndex = dest.trainIndex
-//         WHERE TIME(start.trainTime) > '$current_time' AND TIME(dest.trainTime) > '$current_time'
-//         ORDER BY start.trainTime ASC";
-
-
         // Execute the query
 $result = mysqli_query($conn, $sql);
 
-// echo "<br>Result: <br>";
 
 echo "<div>
     <h1>Bharatiya Railways</h1>        
@@ -97,8 +84,6 @@ if ($result) {
             
             echo "<td>" . $row['trainType'] . "</td>"; 
 
-            // echo "<td><button class='button button1' onclick='window.location.href=\"logged_in_user_details.php\"'>Book</button></td>";
-
             session_start(); // Start the session
 
             if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
@@ -107,13 +92,9 @@ if ($result) {
             } else {
                 // User is not logged in, redirect to details_page.php
                 echo "<td><button class='button button1' onclick=\"window.location.href='details_page.php?starting_station=" . urlencode(strtolower($_GET['starting_station'])) . "&destination_station=" . urlencode(strtolower($_GET['destination_station'])) . "&date=" . urlencode($_GET['date']) . "&trainIndex=" . urlencode($row['trainIndex']) . "';\">Book Train</button></td>";
-            }
-
-
-           
+            }           
             echo "</tr>";
-        }
-        
+        }        
         echo "</table>";
     } else {
         echo "<div class='error'>No Trains are Available to Book currently</div>";
@@ -126,6 +107,6 @@ if ($result) {
 
 
 mysqli_close($conn);
-// echo "<br>Connection closed";
+//Connection closed";
 
 ?>

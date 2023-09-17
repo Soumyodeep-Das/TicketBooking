@@ -12,12 +12,10 @@ $conn = mysqli_connect($servername, $username, $password);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-// echo "<br>Connected successfully";
 
 // Select the database
 mysqli_select_db($conn, $database);
 
-// echo "<br>Connected successfully";
 // SQL query to fetch data from the 'userdetails' table
 $query=mysqli_query($conn,"select * from userdetails");
 
@@ -37,8 +35,6 @@ while($row=mysqli_fetch_array($query)){
 
 
 mysqli_close($conn);
-// echo "<br>Connection closed";
-
 
 require('fpdf/fpdf.php');
 

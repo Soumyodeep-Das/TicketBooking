@@ -27,7 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT * FROM stations WHERE stationName LIKE '%$starting_station%' OR stationName LIKE '%$destination_station%'";
     $result = mysqli_query($conn, $sql);
 
-    // echo "<br>Result: <br>";
 
     $count=0;
 
@@ -35,7 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (mysqli_num_rows($result) > 0) {
             // output data of each row
             while ($row = mysqli_fetch_assoc($result)) {
-                // echo "stationIndex: " . $row["stationIndex"] . " - stationName: " . $row["stationName"] . "<br>";
                 $count++;
             }
         } else {
@@ -70,11 +68,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     mysqli_close($conn);
-    // echo "<br>Connection closed";
-
-    // Redirect to book_train.php
-//     header("Location: book_train.php");
-//     exit;
 }
 
 ?>
