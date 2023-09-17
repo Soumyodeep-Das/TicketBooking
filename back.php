@@ -1,12 +1,12 @@
 <?php
 session_start(); // Start the session
-if (isset($_SESSION['user_details'])) {
+if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
     $user_details = $_SESSION['user_details'];
     $name = $user_details['name'];
     $email = $user_details['email'];
     $phone = $user_details['phone_no'];
 } else {
-    $name = $_POST['name'];
+    echo $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
 }
@@ -84,7 +84,7 @@ mysqli_close($conn);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="back.css">
+    <link rel="stylesheet" href="styling/back.css">
     <title>ERS</title>
 </head>
 <body>

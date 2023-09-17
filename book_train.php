@@ -10,96 +10,14 @@ date_default_timezone_set('Asia/Kolkata');
 $current_time = date("H:i:s");
 $current_date = date("Y-m-d");
 
-echo "
-<style>
+echo "<link rel='stylesheet' href='styling/book_train.css'>";
+echo '<style>
 body {
-    min-height: 100vh;
-    background: url(train2.jpg) no-repeat bottom fixed;
-    background-size: cover; /* Ensure the background image covers the entire viewport */
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("photos/train2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.6s;
-    z-index: 99;
-    font-family: 'Times New Roman, Times, serif;
-    
-}
-
-.frame {
-    margin: 0 auto;
-    width: 80%;
-    padding: 1em;
-    border: 2px solid rgb(197, 159, 76);
-    border-radius: 1em;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
-    font-size: 22.5px;
-    text-align: center;
-}
-
-.button {
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    margin-left: 10%;
-    width: 80%;
-    background-color: #4CAF50; /* Default button background color */
-}
-
-.button1 {
-    background-color: white;
-    color: black;
-    border: 2px solid #4CAF50;
-}
-
-.button1:hover {
-    background-color: #4CAF50;
-    color: white;
-}
-
-h3 , h1{
-    text-align: center;
-    padding: 10px;
-    background: transparent;
-    font-size: 30px;
-    color: black;
-    margin: 0 auto;
-    width: 80%;
-    border-radius: 1em;
-    // border-bottom: 0.5px solid #fff;
-    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the header */
-}
-
-.error {
-    text-align: center;
-    padding: 1em;
-    background: transparent;
-    font-size: 30px;
-    color: #e03a3a;
-    margin: 0 auto;
-    width: 80%;
-    border-radius: 1em;
-    border: 1.5px solid red;
-}
-</style>
-";
+</style>';
 
 
 $servername = "localhost";

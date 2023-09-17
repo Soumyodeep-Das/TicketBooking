@@ -1,34 +1,23 @@
+<?php
+session_start();
+$_SESSION['logged_in'] = false;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="styling/style.css">
+    <link rel="stylesheet" href="styling/login.css">
+    <link rel="stylesheet" href="styling/details_page.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
-        .wrapper {
-            height: 560px;            
+        body {
+            background-image: url("photos/train2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
         }
-        .submit-butt {
-            width: 100%;
-            height: 50px;
-            background: transparent;
-            border: 2px solid #fff;
-            outline: none;
-            border-radius: 1px;
-            cursor: pointer;
-            font-size: 1.1em;
-            color: #fff;
-            font-weight: 500;
-        }
-
-        .submit-butt:hover {
-            background: #fff;
-            color: #333;
-        } 
     </style>
-
     <title>Ticket</title>
 </head>
 <body>
@@ -44,7 +33,7 @@
         <h1>Bharatiya Railways</h1>
         <nav>
             <ul class="navigation">
-                <li><img src="logo-less.png" alt="train" class="logo"></li>
+                <li><img src="photos/logo-less.png" alt="train" class="logo"></li>
                 <span class="menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="login.php">Login</a></li>

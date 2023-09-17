@@ -4,67 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $starting_station = strtolower($_POST['starting_station']);
     $destination_station = strtolower($_POST['destination_station']);
     $date = $_POST['date'];
-    echo "<style>
-    .frame {
-        font-family: Arial, Helvetica, sans-serif;
-        
-        margin: 0 auto;
-        width: 100%;
-        padding: 1em;
-        border: 1px solid #CCC;
-        border-radius: 1em;
-        border: none;
-        border-bottom: 2px solid rgb(197, 159, 76);
-        border-radius: 4px;
-        font-size: 15px;
-        text-align: center;
-    }
-
-    .button {
-        border: none;
-        color: white;
-        padding: 16px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        transition-duration: 0.4s;
-        cursor: pointer;
-        margin-left: 45%;
-      }
-      
-    .button1 {
-        background-color: white;
-        color: black;
-        border: 2px solid #4CAF50;
-    }
-      
-    .button1:hover {
-        background-color: #4CAF50;
-        color: white;
-    }
-    .button2 {
-        background-color: white;
-        color: black;
-        border: 2px solid #cc2626;
-    }
-      
-    .button2:hover {
-        background-color: #cc2626;
-        color: white;
-    }
-
-
-    #notavailable {
-        color: red;
-        border: 1px solid #e98870;
-    }
-    #available {
-        color: green;
-        border: 1px solid #93e2b4;
-    }
-    </style>";
+    echo "<link rel='stylesheet' href='styling/find_train.css'>";
     
     $servername = "localhost";
     $username = "root";

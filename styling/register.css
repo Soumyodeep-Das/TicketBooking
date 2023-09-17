@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url("train2.jpg") no-repeat center;
+    background: url("images/train2.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -138,7 +138,8 @@ h1{
 
 
 .wrapper {
-    width: 420px;
+    width: 450px;
+    height: 700px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
@@ -146,6 +147,7 @@ h1{
     color: #fff;
     border-radius: 10px;
     padding: 30px 40px;
+    margin-top: 100px;
 }
 
 .wrapper h1 {
@@ -195,6 +197,7 @@ h1{
 .remember-forgot label input {
     accent-color: #fff;
     margin-right: 3px;
+    width: 15px;
 }
 
 .remember-forgot a {

@@ -107,7 +107,7 @@ $pdf->SetFont('Arial', '', 12);
 $pdf->Cell(95, 10, $ticket, 1, 0, 'C');
 $pdf->Cell(95, 10, 'Confirmed', 1, 1, 'C', true);
 //Image Logo
-$pdf->Image('logo.jpeg', 40, 5, -300);
+$pdf->Image('photos/logo.jpeg', 40, 5, -300);
 
 // Output PDF
 $pdf->Output();
