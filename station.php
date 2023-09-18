@@ -23,6 +23,7 @@
             margin: 10px;
         }
     </style>
+    <link rel="stylesheet" href="styling/find_train.css">
     <title>Station Flowchart</title>
 </head>
 <body>
@@ -56,5 +57,8 @@
             mysqli_close($conn);
         ?>
     </div>
+    <?php
+        echo "<br><br><button class='button button2' onclick=window.location.href='index.html'>Back</button>";
+    ?>
 </body>
 </html>
